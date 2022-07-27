@@ -1,0 +1,259 @@
+.recipe {
+  width: 70%;
+  background-color: $color-primary;
+  border-bottom-right-radius: inherit;
+  @include flex-centering(column);
+  justify-content: space-between;
+
+  &__fig {
+    width: 100%;
+    display: flex;
+    position: relative;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__picture {
+    width: 100%;
+    height: 15em;
+    object-fit: cover;
+    filter: blur(2px);
+  }
+  &__title {
+    position: absolute;
+    bottom: 0;
+    transform: translate(50%, 20%) skewY(-5deg);
+    font-weight: 700;
+    font-size: 2em;
+    text-transform: uppercase;
+    width: 50%;
+    line-height: 1.95;
+    text-align: center;
+
+    span {
+      padding: 1.3rem 2rem;
+      color: $color-text-dark;
+      background-image: linear-gradient(
+        to bottom,
+        $color-primary,
+        $color-secondary
+      );
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+    }
+  }
+
+  &__measures {
+    @include flex-centering(row);
+    flex-wrap: wrap;
+    padding: 5em 0 3em 0;
+    width: 100%;
+    background-color: $color-body-bg;
+
+    &__icon {
+      fill: $color-text-dark;
+      width: 1rem;
+      padding: 0;
+      height: 1rem;
+    }
+    & > * {
+      @include flex-centering(row);
+      padding: 0rem 1rem;
+    }
+    span {
+      padding-left: 0.5rem;
+    }
+
+    // &__clock {
+    //  }
+
+    //  &__serving {
+    //  }
+
+    &__btns {
+      fill: $color-text-dark;
+      &--btn {
+        @include flex-centering(row);
+        padding: 0 0.3rem 0 0.3rem;
+        border: none;
+        background-color: inherit;
+        &:hover {
+          @include transition-up();
+        }
+      }
+      svg {
+        width: 1.5rem;
+        height: 1.2rem;
+      }
+    }
+
+    &__user {
+      fill: red;
+      &--icon {
+        padding: 0.3rem;
+        &:hover {
+          @include transition-up();
+        }
+      }
+      svg {
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+    }
+
+    &__bookmark {
+      fill: $color-text-dark;
+      &--btn {
+        border: solid $color-text-dark;
+        border-radius: 50%;
+        padding: 0.3em;
+        background-color: inherit;
+      }
+      &:hover {
+        @include transition-on-scale();
+      }
+      &--icon {
+        fill: inherit;
+        width: 1.2rem;
+        height: 1.2rem;
+        background-color: inherit;
+      }
+    }
+
+    // &__btn{
+    //   width: 2rem;
+    //   height: 2rem;
+    // }
+  }
+
+  ///////////
+  // INGREDIENTS
+  &__ingredients {
+    min-height: 20vh;
+    padding: 3rem 2rem;
+    //font-size: 1.6rem;
+    line-height: 1.4;
+    background-color: $color-primary;
+    width: 100%;
+    @include flex-centering(column);
+    //justify-content: flex-start;
+  }
+
+  &__ingredient-list {
+    //background-color: blue;
+    padding: 1em;
+    height: 100%;
+    display: grid;
+    font-size: 1rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem 3rem;
+    list-style: none;
+  }
+
+  &__ingredient {
+    display: flex;
+    color: $color-text-gray;
+    //background-color: chartreuse;
+  }
+
+  &__icon {
+    height: 1.2rem;
+    width: 1.2rem;
+    fill: $color-text-dark;
+    margin-right: 0.4rem;
+    flex: 0 0 auto;
+    margin-top: 0.1rem;
+  }
+
+  &__quantity {
+    margin-right: 0.5rem;
+    flex: 0 0 auto;
+  }
+
+  ///////////
+  // DIRECTIONS
+  &__directions {
+    width: 100%;
+    padding: 2rem 2rem;
+    padding-bottom: 5rem;
+    border-radius: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: $color-body-bg;
+
+    &-text {
+      font-size: 1rem;
+      text-align: left;
+      margin-bottom: 1rem;
+      color: $color-text-gray;
+    }
+
+    &__btn {
+      padding: 1em 2em;
+      border-radius: 2em;
+      @include flex-centering(row);
+      text-decoration: none;
+      color: white;
+      background-color: $color-secondary;
+      &:visited {
+        color: $color-text-gray;
+      }
+      &:hover{
+        //transform: scale(1.1);
+        @include transition-up();
+        background-color: $color-light;
+        color: $color-text-dark;
+      }
+    }
+    &__icon {
+      fill: $color-text-gray;
+      width: 1.2rem;
+      height: 1.2rem;
+      margin-left: 0.6em;
+    }
+  }
+
+  &__publisher {
+    font-weight: 700;
+    color: $color-text-dark;
+  }
+}
+
+.heading--2 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: $color-text-dark;
+}
+
+.spinner{
+  margin: 5em auto;
+  text-align: center;
+}
+.spinner svg{
+  height: 3rem;
+  width: 3rem;
+  fill: $color-secondary;
+  animation: rotate 2s infinite linear;
+}
+
+.error{
+  margin: 5em auto;
+  text-align: center;
+}
+
+.error svg{
+  height: 3rem;
+  width: 3rem;
+  fill: $color-secondary;
+}
+
+@keyframes rotate{
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}

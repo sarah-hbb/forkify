@@ -1,0 +1,137 @@
+.search-result {
+  position: relative;
+  border-bottom-left-radius: inherit;
+  min-width: 30%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  background-color: white;
+
+}
+.results {
+  background-color: inherit;
+  padding: .1em;
+}
+
+.result {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  list-style-type: none;
+
+  // & >*{
+  //   padding: .1em;
+  // }
+
+  &:hover {
+    background-color: $color-light;
+    @include transition-up();
+  }
+
+
+  &__preview__link {
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    list-style-type: none;
+    padding:.5em;
+    overflow: hidden;
+
+    &__active{
+      background-color: $color-light;
+    }
+
+  }
+
+
+
+  
+  &__pic {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__text {
+    flex: 1;
+    padding: 0 0.7em;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &__title {
+      color: $color-text-dark;
+      font-weight: bold;
+    }
+    &__description {
+      color: $color-text-gray;
+    }
+  }
+
+  &__user--btn {
+    border: none;
+    justify-self: flex-start;
+    background-color: inherit;
+
+    &--icon {
+      fill: $color-text-dark;
+      width: 1.2em;
+      height: 1.2em;
+      border: solid $color-text-dark;
+      border-radius: 50%;
+    }
+  }
+}
+
+// &__active{color: blue}
+
+.pagination {
+  padding: 2em;
+  justify-self: flex-end;
+
+  &__btn {
+    @include flex-centering(row);
+    text-transform: capitalize;
+    background-color: inherit;
+
+    padding: 0.3em;
+    border: $color-text-gray solid;
+    border-radius: 1em;
+    color: $color-text-dark;
+
+    &--right {
+      float: right;
+    }
+
+    &--left {
+      float: left;
+    }
+  }
+
+  &__icon {
+    width: 1em;
+    height: 1em;
+
+    &--right {
+      margin-left: 0.3em;
+    }
+    &--left {
+      margin-right: 0.3em;
+    }
+  }
+}
+.copyright {
+  width: 100%;
+  //position: absolute;
+  bottom: 0;
+  background-color: white;
+  font-size: 0.7rem;
+  padding: 1rem;
+  border-radius: inherit;
+  background-color: $color-primary;
+}

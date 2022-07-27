@@ -1,0 +1,22 @@
+.bookmark {
+  position: absolute;
+  background-color: white;
+  top: 100%;
+  right: 0;
+  left: -100%;
+  z-index: 4;
+  box-shadow: 0px 1px 1px 1px #1b350c42;
+  visibility: hidden;
+  opacity: 0;
+  &__list {
+    min-width: 50%;
+    margin: 0;
+  }
+
+}
+
+.bookmark:hover,
+.nav__btn--bookmarks:hover+.bookmark{
+  visibility: visible;
+  opacity: 10;
+}
