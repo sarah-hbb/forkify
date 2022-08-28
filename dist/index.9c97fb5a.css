@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: gray;
+  background-color: #d2d3d1;
   margin: 1vh 2vh;
   font-family: Nunito Sans, sans-serif;
   font-weight: 400;
@@ -247,7 +247,7 @@ button {
 
 .recipe__measures {
   width: 100%;
-  background-color: #e7e7e7c9;
+  background-color: #e7e7e737;
   flex-flow: wrap;
   justify-content: center;
   align-items: center;
@@ -383,7 +383,7 @@ button {
 .recipe__directions {
   width: 100%;
   border-radius: inherit;
-  background-color: #e7e7e7c9;
+  background-color: #e7e7e737;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -603,6 +603,11 @@ button {
   bottom: 0;
 }
 
+.hidden {
+  opacity: 0;
+  display: none;
+}
+
 .bookmark {
   z-index: 4;
   visibility: hidden;
@@ -715,13 +720,28 @@ button {
   text-transform: uppercase;
   grid-column: 1 / -1;
   margin-bottom: 1rem;
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
 .upload__btn {
+  color: #38ac0e;
+  border: none;
+  border-radius: 2em;
   grid-column: 1 / -1;
+  justify-content: center;
   justify-self: center;
+  align-items: center;
+  padding: .4em 2em;
+  display: flex;
+}
+
+.upload__icon {
+  fill: #38ac0e;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  margin-right: 1em;
 }
 
 /*# sourceMappingURL=index.9c97fb5a.css.map */

@@ -65,24 +65,24 @@ class RecipeView extends View{
                 <svg class="recipe__measures__icon">
                     <use href="${icons}#icon-users"></use>
                 </svg>
-                <span recipe__measures__servings--number> ${this._data.serving}</span>
+                <span recipe__measures__servings--number> ${this._data.servings}</span>
                 <span recipe__measures__servings--text> servings</span>
             </div>
 
             <div class="recipe__measures__btns">
-                <button class="recipe__measures__btns--btn recipe__measures__btn__update" data-update-to="${this._data.serving-1}">
+                <button class="recipe__measures__btns--btn recipe__measures__btn__update" data-update-to="${this._data.servings-1}">
                     <svg>
                         <use href="${icons}#icon-minus-circle"></use>
                     </svg>
                 </button>
-                <button class="recipe__measures__btns--btn recipe__measures__btn__update" data-update-to="${this._data.serving+1}"  >
+                <button class="recipe__measures__btns--btn recipe__measures__btn__update" data-update-to="${this._data.servings+1}"  >
                     <svg>
                         <use href="${icons}#icon-plus-circle"></use>
                     </svg>
                 </button>
             </div>
             
-            <div class="recipe__measures__user">
+            <div class="recipe__measures__user ${this._data.key ? '' : 'hidden'}">
                 <svg class="recipe__measure__user--icon ">
                     <use href="${icons}#icon-user"></use>
                 </svg>

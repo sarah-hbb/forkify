@@ -1,6 +1,6 @@
 import View from './View.js';
 import previewView from './previewView.js';
-import icons from 'url:../../img/icons.svg';
+
 
 class ResultView extends View {
   _parentElement = document.querySelector('.results');
@@ -9,8 +9,10 @@ class ResultView extends View {
 
   _generateMarkup() {
     //console.log(this._data);
+
     return this._data
-      .map(result => previewView.render(result, false))
+      .map(result => 
+        previewView.render(result, false))
       .join('');
   }
 }

@@ -1,11 +1,13 @@
 import View from './View.js';
 import icons from 'url:../../img/icons.svg';
+import {KEY} from '../config'
 
 class PreviewView extends View {
   _parentElement ='';
   
 
   _generateMarkup(){
+    
     const id = window.location.hash.slice(1);
       return`
       <li class="result">
@@ -15,8 +17,8 @@ class PreviewView extends View {
                     <h4 class="result__text__title">${this._data.title}</h4>
                     <h6 class="result__text__description">${this._data.publisher}</h6>
                 </div>
-                <button class="result__user--btn">
-                    <svg class="result__user--btn--icon">
+                <button class="result__user--btn ${this._data.key ? '' : 'hidden'}">
+                    <svg class="result__user--btn--icon ">
                         <use href="${icons}#icon-user"></use>
                     </svg>
                 </button>

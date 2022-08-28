@@ -2,7 +2,7 @@ $color-primary: rgb(223, 243, 224);
 $color-secondary: rgb(68, 252, 1);
 $color-text-gray: gray;
 $color-text-dark: rgb(56, 172, 14);
-$color-body-bg: rgba(231, 231, 231, 0.788);
+$color-body-bg: rgba(231, 231, 231, 0.217);
 
 $color-dark: rgb(96, 252, 5);
 $color-light: rgb(238, 247, 238);
@@ -46,7 +46,7 @@ body {
   line-height: 1.6;
   // color: $color-grey-dark-1;
   // background-image: $gradient;
-  background-color: gray;
+  background-color: rgb(210, 211, 209);
   margin: 1vh 2vh;
 }
 
